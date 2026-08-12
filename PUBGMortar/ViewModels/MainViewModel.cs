@@ -14,7 +14,6 @@ public partial class MainViewModel : ObservableObject, IDisposable
 {
     private readonly MortarCalculator _calculator;
     private readonly GlobalHotkeyService _hotkeyService;
-    private readonly UpdateService _updateService;
 
     private MeasurementStep _currentStep = MeasurementStep.Idle;
     private (double X, double Y)? _tempPoint;
@@ -40,15 +39,12 @@ public partial class MainViewModel : ObservableObject, IDisposable
     {
         _calculator = new MortarCalculator();
         _hotkeyService = new GlobalHotkeyService();
-        _updateService = new UpdateService();
 
         _hotkeyService.StartMeasurement += OnStartMeasurement;
         _hotkeyService.QuickMeasurement += OnQuickMeasurement;
         _hotkeyService.PointSet += OnPointSet;
 
         _hotkeyService.Start();
-
-        _ = _updateService.CheckAndApplyUpdateAsync(status => StatusText = status);
     }
 
     [RelayCommand]
