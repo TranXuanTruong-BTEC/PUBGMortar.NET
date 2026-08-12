@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <!-- Tự viết Main() trong App.xaml.cs để gọi VelopackApp.Build().Run() sớm nhất có thể -->
+    <DisableXamlGeneratedMain>true</DisableXamlGeneratedMain>
+    <AssemblyTitle>PUBG Mortar Aid</AssemblyTitle>
+    <Description>Công cụ hỗ trợ tính khoảng cách đặt cối trong PUBG</Description>
+    <!-- Icon ứng dụng -->
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <!-- Chạy với quyền Administrator -->
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.*" />
+    <PackageReference Include="H.Hooks" Version="1.*" />
+    <PackageReference Include="Velopack" Version="*" />
+  </ItemGroup>
+
+</Project>
