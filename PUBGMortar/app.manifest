@@ -4,8 +4,14 @@
   <trustInfo xmlns="urn:schemas-microsoft-com:asm.v2">
     <security>
       <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
-        <!-- 要求管理员权限运行 -->
-        <requestedExecutionLevel level="requireAdministrator" uiAccess="false" />
+        <!-- Chạy quyền thường (asInvoker) — Velopack cần tự chạy lại app ở chế
+             độ này trong lúc cài đặt/gỡ/cập nhật. Ép requireAdministrator ở đây
+             sẽ làm trình cài đặt báo "Install Partially Succeeded". Nếu hotkey
+             không nhận được phím lúc PUBG đang focus (do game chạy elevated),
+             chuột phải shortcut đã cài -> Properties -> Compatibility -> tick
+             "Run this program as an administrator" để chạy app ở quyền admin
+             sau khi cài xong, thay vì ép ngay từ trong installer. -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
       </requestedPrivileges>
     </security>
   </trustInfo>
