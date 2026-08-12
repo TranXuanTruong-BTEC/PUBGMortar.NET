@@ -21,7 +21,7 @@ public static class LicenseService
 {
     // Phải khớp với Secret trong KeyGenerator/Program.cs. Đổi thành chuỗi riêng
     // của bạn trước khi build bản phát hành đầu tiên.
-    private const string Secret = "PUBGMortarPro-DoiChuoiNay-2026";
+    private const string Secret = "newkey2026";
 
     private static string StatePath =>
         Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
