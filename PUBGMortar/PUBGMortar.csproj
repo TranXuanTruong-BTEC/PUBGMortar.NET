@@ -6,8 +6,6 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
-    <!-- Tự viết Main() trong App.xaml.cs để gọi VelopackApp.Build().Run() sớm nhất có thể -->
-    <DisableXamlGeneratedMain>true</DisableXamlGeneratedMain>
     <AssemblyTitle>PUBG Mortar Aid</AssemblyTitle>
     <Description>Công cụ hỗ trợ tính khoảng cách đặt cối trong PUBG</Description>
     <!-- Icon ứng dụng -->

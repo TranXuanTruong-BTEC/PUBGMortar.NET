@@ -10,19 +10,13 @@ namespace PUBGMortar
     /// </summary>
     public partial class App : Application
     {
-        [STAThread]
-        public static void Main(string[] args)
+        public App()
         {
-            // Phải chạy đầu tiên, trước bất kỳ code nào khác — Velopack dùng
-            // các tham số dòng lệnh đặc biệt (--veloapp-install, --veloapp-updated...)
-            // khi installer/updater gọi lại app trong quá trình cài đặt/gỡ/cập nhật.
-            // Nếu app không được chạy qua các bước đó (VD: chạy trực tiếp khi debug),
-            // hàm này trả về ngay và chương trình chạy bình thường như dưới.
+            // Phải chạy trước khi bất kỳ cửa sổ nào được tạo — Velopack dùng các
+            // tham số dòng lệnh đặc biệt khi installer/updater gọi lại app trong
+            // quá trình cài đặt/gỡ/cập nhật. Nếu app chạy trực tiếp (VD: debug),
+            // hàm này trả về ngay và chương trình khởi động bình thường.
             VelopackApp.Build().Run();
-
-            var app = new App();
-            app.InitializeComponent();
-            app.Run();
         }
     }
 
