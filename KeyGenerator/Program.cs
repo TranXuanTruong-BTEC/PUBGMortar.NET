@@ -3,7 +3,7 @@ using System.Text;
 
 // PHẢI khớp chính xác với Secret trong PUBGMortar/Services/LicenseService.cs.
 // Đổi cả hai chỗ cùng lúc nếu bạn muốn đặt secret riêng.
-const string Secret = "PUBGMortarPro-DoiChuoiNay-2026";
+const string Secret = "KEY001122334455";
 
 Console.Write("Nhập số giờ hiệu lực cho key (VD: 24, 72, 720): ");
 var input = Console.ReadLine();
